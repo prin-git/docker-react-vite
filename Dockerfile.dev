@@ -1,0 +1,6 @@
+FROM node:alpine
+WORKDIR /docker-react-vite
+COPY . /docker-react-vite
+RUN npm ci
+RUN npm run build
+CMD ["npm", "start"]

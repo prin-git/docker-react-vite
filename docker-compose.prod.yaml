@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+ docker-react-prod:
+  image: docker-react-pro-ima
+  build: 
+   dockerfile: Dockerfile.prod
+  container_name: docker-react-pro-c
+  ports:
+    - "8081:80"
+  environment:
+    - NODE_ENV=production
